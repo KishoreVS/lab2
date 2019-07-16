@@ -1,42 +1,52 @@
 package lab2;
 
-public class Video extends MediaItem{
-	Video(int idNum,int noOfCopies,String title)
+public class Video extends MediaItem 
+{
+	private String director;
+	private int year;
+	private String genre;
+	public String getDirector() 
 	{
-		super(idNum,noOfCopies,title);
-	}
-	
-	public String toString()
-	{
-		return "Video [director= "+director+", genre()= "+genre+", yearReleased()= "+yearReleased+", getDirector()= "+getDirector()+", getGenre()= "+getGenre()+", getYearReleased()= "+getYearReleased()+", toString()= "+super.toString()+", getRunTime= "+getRunTime()+", getIdNum()= "+getIdNum()+", getNoOfCopies()= "+getNoOfCopies()+", getTitle()= "+getTitle()+", getClass= "+getClass()+", hashCode()= "+hashCode()+" ]";
-	}
-	
-	private String director,genre,yearReleased;
-
-	public String getDirector() {
 		return director;
 	}
-
-	public void setDirector(String getDirector) {
-		this.director = getDirector;
+	public void setDirector(String director)
+	{
+		this.director = director;
 	}
-
-	public String getGenre() {
+	public int getYear() 
+	{
+		return year;
+	}
+	public void setYear(int year) 
+	{
+		this.year = year;
+	}
+	public String getGenre() 
+	{
 		return genre;
 	}
-
-	public void setGenre(String genre) {
+	public void setGenre(String genre)
+	{
 		this.genre = genre;
 	}
-
-	public String getYearReleased() {
-		return yearReleased;
+	public Video()
+	{
+		System.out.println("This is a Video");
+		setDirector("GVM");
+		setUid(78953);
+		setTitle("ENPT");
+		setCopy(1);
+		setGenre("Thriller");
+		display();
 	}
-
-	public void setYearReleased(String yearReleased) {
-		this.yearReleased = yearReleased;
+	public void display() 
+	{
+		System.out.println("The Name of the Video is "+getTitle());
+		System.out.println("The Name of the Director is "+getDirector());
+		System.out.println("The ID of the Video is "+getUid());
+		System.out.println("No.of Videos available are "+getCopy());
+		System.out.println("The Genre is "+getGenre());
+		System.out.println("------------------------------------");
+		
 	}
-	
-	
-
 }
