@@ -1,43 +1,44 @@
 package lab2;
 
-public class CD extends MediaItem 
+public abstract class Item 
 {
-	private String artist;
-    private String genre;
-	public String getArtist() 
+	private int uid;
+	private String title;
+	private int copy;
+	public int getUid()
 	{
-		return artist;
+		return uid;
 	}
-	public void setArtist(String artist) 
+	public void setUid(int uid) 
 	{
-		this.artist = artist;
+		this.uid = uid;
 	}
-	public String getGenre() {
-		return genre;
-		
-	}
-	public void setGenre(String genre)
+	public String getTitle() 
 	{
-		this.genre = genre;
+		return title;
 	}
-	public CD()
+	public void setTitle(String title)
 	{
-		System.out.println("This is a CD");
-		setArtist("Ed Sheeran");
-		setUid(28894);
-		setTitle("Shape of You");
-		setCopy(6788);
-		setGenre("Pop");
-		display();
+		this.title = title;
 	}
-	public void display() 
+	public int getCopy() 
 	{
-		System.out.println("The Name of the CD is "+getTitle());
-		System.out.println("The Name of the Artist is "+getArtist());
-		System.out.println("The ID of the CD is "+getUid());
-		System.out.println("No.of CDs available are "+getCopy());
-		System.out.println("The Genre is "+getGenre());
-		System.out.println("------------------------------------");
-		
+		return copy;
+	}
+	public void setCopy(int copy)
+	{
+		this.copy = copy;
+	}
+	
+@SuppressWarnings("unused")
+public static void main(String args[]) 
+{
+	System.out.println("This is an Abstract Class");
+	System.out.println("------------------------------------");
+	Book b=new Book();
+	CD c=new CD();
+	JournalPaper jp=new JournalPaper();
+	Video v=new Video();
+   
 	}
 }
