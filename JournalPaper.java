@@ -1,38 +1,36 @@
 package lab2;
-public class JournalPaper extends WrittenItem{
-	JournalPaper(int idNum,int noOfCopies,String title)
-	{
-		super(idNum,noOfCopies,title);
-	}
+public class JournalPaper extends WrittenItem 
+{
+private int pub_year;
+public JournalPaper() 
+{
+	System.out.println("This is a Journal Paper");
+	setAuthor("Kentucky");
+	setUid(2567);
+	setTitle("Spam Detection");
+	setCopy(16);
+	setPub_year(2018);
+	display();
 	
-	public JournalPaper()
-	{
-		
-	}
-	
-	private String yearPublished;
+}
 
-	public String getYearPublished() {
-		return yearPublished;
-	}
+public int getPub_year() 
+{
+	return pub_year;
+}
 
-	public void setYearPublished(String yearPublished) {
-		this.yearPublished = yearPublished;
-	}
+public void setPub_year(int pub_year) 
+{
+	this.pub_year = pub_year;
+}
+public void display()
+{
+	System.out.println("The Name of the Paper is "+getTitle());
+	System.out.println("The Name of the Author is "+getAuthor());
+	System.out.println("The ID of the Paper is "+getUid());
+	System.out.println("No.of Copies available is "+getCopy());
+	System.out.println("The Year is "+getPub_year());
+	System.out.println("------------------------------------");
 	
-	public String getAuthor()
-	{
-		return super.getAuthor();
-	}
-	
-	public void setAuthor(String author)
-	{
-		super.setAuthor(author);
-	}
-	
-	public String toString()
-	{
-		return "JournalPaper [yearPublished= "+yearPublished+", getYearPublished()= "+getYearPublished()+", getAuthor()= "+getAuthor()+", toString()= "+super.toString()+", getIdNum()= "+getIdNum()+", getNoOfCopies()= "+getNoOfCopies()+", getTitle()= "+getTitle()+", getClass= "+getClass()+", hashCode()= "+hashCode()+" ]";
-	}
-
+}
 }
