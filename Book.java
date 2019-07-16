@@ -1,35 +1,22 @@
 package lab2;
 
-public class Book extends WrittenItem{
-
-	Book(int idNum,int noOfCopies,String title)
-	{
-		super(idNum,noOfCopies,title);
-	}
-	
-	Book()
-	{
-		
-	}
-	
-	public static void main(String[] args)
-	{
-		
-	}
-	
-	public String getAuthor()
-	{
-		return super.getAuthor();
-	}
-	
-	public void setAuthor(String author)
-	{
-		super.setAuthor(author);
-	}
-	
-	public String toString()
-	{
-		return "Book [getAuthor()= "+getAuthor()+", toString()= "+super.toString()+", getIdNum()= "+getIdNum()+", getNoOfCopies()= "+getNoOfCopies()+", getTitle()= "+getTitle()+", getClass= "+getClass()+", hashCode()= "+hashCode()+" ]";
-	}
-	
+public class Book extends WrittenItem 
+{
+public Book()
+{
+	System.out.println("Core Java Book");
+	setAuthor("Kishore Kumaar");
+	setUid(543);
+	setTitle("Basics of Java");
+	setCopy(16);
+	display();
+}
+public void display() 
+{
+	System.out.println("The Name of the Book is "+getTitle());
+	System.out.println("The Name of the Author is "+getAuthor());
+	System.out.println("The ID of the Book is "+getUid());
+	System.out.println("No.of Copies available are "+getCopy());
+	System.out.println("------------------------------------");
+}
 }
