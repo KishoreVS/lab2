@@ -1,22 +1,19 @@
 package lab2;
-public class MediaItem extends Item{
-	MediaItem(int idNum,int noOfCopies,String title)
+public class MediaItem extends Item
+{
+	public MediaItem()
 	{
-		super(idNum,noOfCopies,title);
+		System.out.println("This is a MediaItem");
 	}
-	
-	public String toString()
-	{
-		return "MediaItem [runTime= "+runTime+", getRunTime()= "+getRunTime()+", toString()= "+super.toString()+", getIdNum()= "+getIdNum()+", getNoOfCopies()= "+getNoOfCopies()+", getTitle()= "+getTitle()+", getClass()= "+getClass()+", hashCode()= "+hashCode()+" ]";
-	}
-	
-	private int runTime;
+private int runtime;
 
-	public int getRunTime() {
-		return runTime;
-	}
+public int getRuntime() 
+{
+	return runtime;
+}
 
-	public void setRunTime(int runTime) {
-		this.runTime = runTime;
-	}
+public void setRuntime(int runtime) 
+{
+	this.runtime = runtime;
+}
 }
