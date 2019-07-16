@@ -1,77 +1,43 @@
 package lab2;
 
-public class CD extends MediaItem{
-	CD(int idNum,int noOfCopies,String title)
+public class CD extends MediaItem 
+{
+	private String artist;
+    private String genre;
+	public String getArtist() 
 	{
-		super(idNum,noOfCopies,title);
-	}
-	
-	private String artist,genre;
-
-	public String getArtist() {
 		return artist;
 	}
-
-	public void setArtist(String artist) {
+	public void setArtist(String artist) 
+	{
 		this.artist = artist;
 	}
-
 	public String getGenre() {
 		return genre;
+		
 	}
-
-	public void setGenre(String genre) {
+	public void setGenre(String genre)
+	{
 		this.genre = genre;
 	}
-	
-	public int getRunTime()
+	public CD()
 	{
-		return super.getRunTime();
+		System.out.println("This is a CD");
+		setArtist("Ed Sheeran");
+		setUid(28894);
+		setTitle("Shape of You");
+		setCopy(6788);
+		setGenre("Pop");
+		display();
 	}
-	
-	public void setRunTime(int runTime)
+	public void display() 
 	{
-		super.setRunTime(runTime);
+		System.out.println("The Name of the CD is "+getTitle());
+		System.out.println("The Name of the Artist is "+getArtist());
+		System.out.println("The ID of the CD is "+getUid());
+		System.out.println("No.of CDs available are "+getCopy());
+		System.out.println("The Genre is "+getGenre());
+		System.out.println("------------------------------------");
+		
 	}
-	
-	public String toString()
-	{
-		return "CD [artist= "+artist+", genre= "+genre+", getGenre()= "+getGenre()+", getArtist()= "+getArtist()+", getRunTime()= "+getRunTime()+", getIdNum()= "+getIdNum()+", getNoOfCopies()= "+getNoOfCopies()+", toString()= "+super.toString()+", getClass()= "+getClass()+", hashCode()= "+hashCode()+"]";
-	}
-	
-	public int getIdNum()
-	{
-		return super.getIdNum();
-	}
-	
-	public void setIdNum(int idNum)
-	{
-		super.setIdNum(idNum);
-	}
-	
-	public int getNoOfCopies()
-	{
-		return super.getNoOfCopies();
-	}
-	
-	public void setNoOfCopies(int noOfCopies)
-	{
-		super.setNoOfCopies(noOfCopies);
-	}
-	
-	public String getTitle()
-	{
-		return super.getTitle();
-	}
-	
-	public void setTitle(String Title)
-	{
-		super.setTitle(Title);
-	}
-	
-	void addItem(int idNum,int noOfCopies,String title)
-	{
-		super.addItem(idNum, noOfCopies, title);
-	}
-
 }
